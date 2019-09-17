@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2주차 과제</title>
+	<style type="text/css">
+		body{margin: 100px;}
+		#display{font-size: 3em;}
+		#height{font-size: 2em;}
+		input{font-size: 1em;}
+		button{font-size: 1em;}
+	</style>
+</head>
+<body>
+	<h1 id="display">아이의 예상 키 값을 구해봅시다.</h1><br><br>
+	<div id="height">
+	아빠  <input type="text" id="dad" placeholder=" 키를 입력하세요."> cm<br><br>
+	엄마  <input type="text" id="mom" placeholder=" 키를 입력하세요."> cm<br><br>
+	<button id="boy">남자</button>&nbsp;&nbsp;&nbsp;<button id="girl">여자</button>
+	</div>
+	
+	
+	<script type="text/javascript">
+		boy.onclick = function(){
+			var dhight = dad.value;
+			var mhight = mom.value;
+			sheight(dhight,mhight);
+		}
+		function sheight(){
+			var sheight = (Number(dad.value) + Number(mom.value))/2 + 
+			6.5;
+			display.innerHTML = "당신 아이의 예상되는 키는 " + sheight 
+			+ "cm 입니다.";
+		}
+		girl.onclick = function(){
+			var dhight = dad.value;
+			var mhight = mom.value;
+			gheight(dhight,mhight);
+		}
+		function gheight(){
+			var gheight = (Number(dad.value) + Number(mom.value))/2 - 
+			6.5;
+			display.innerHTML = "당신 아이의 예상되는 키는" + gheight 
+			+ "cm 입니다.";
+		}
+		
+	</script>
+</body>
+</html>
